@@ -1,0 +1,29 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer components {
+    .body-grid {
+        grid-template-rows: 1fr 36px;
+        @apply grid min-h-screen w-full gap-y-2;
+    }
+}
+
+@font-face {
+    font-family: 'Circular';
+    src: url('/assets/fonts/CircularStd-Book.otf');
+    src: url('/assets/fonts/CircularStd-Book.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Millik';
+    src: url('/assets/fonts/Millik.ttf');
+    src: url('/assets/fonts/Millik.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    display: swap;
+}
