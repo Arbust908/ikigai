@@ -6,7 +6,7 @@
 
 @layer components {
   .body-grid {
-    grid-template-rows: 1fr 36px;
+    grid-template-rows: 1fr 40px;
     @apply grid min-h-screen w-full gap-y-2;
   }
   .part {

@@ -14,7 +14,7 @@
             <img class="w-full h-full" src="./assets/img/fondo.svg" alt="">
         </picture> -->
     </header>
-    <main>
+    <main x-data="{ info: false }" class="relative">
       <section class="flex flex-col items-center mt-6">
         <h1
           class="text-5xl font-main bg-clip-text text-transparent bg-gradient-to-b from-teal-400 to-yellow-500 inline-block"
@@ -29,31 +29,31 @@
         <svg
           viewBox="0 0 685 681.5"
         >
-          <g class="part group" @click="">
+          <g class="part group hover:scale-125" @click="info = exictement">
             <path
               class="cls-1"
               d="M392.5,341A164.4,164.4,0,0,1,387.59,381a159.49,159.49,0,0,0,68.21-40.45q-2.54-2.52-5.19-4.94a158.31,158.31,0,0,0-14.92-12c-1-.75-2.09-1.48-3.16-2.19q-3.18-2.16-6.47-4.15a159.15,159.15,0,0,0-20.64-10.57c-2.38-1-4.8-2-7.24-2.86q-5.28-1.92-10.73-3.49A164.06,164.06,0,0,1,392.5,341Z"
             />
           </g>
-          <g class="part group" @click="">
+          <g class="part group hover:scale-125" @click="info = satisfacion">
             <path
               class="cls-2"
               d="M230.4,341a159.53,159.53,0,0,0,67,39.79,165.76,165.76,0,0,1,.07-79.89c-3,.91-6,1.9-9,3-2.44.9-4.86,1.85-7.24,2.86a159.15,159.15,0,0,0-20.64,10.57q-3.29,2-6.47,4.15c-1.07.71-2.12,1.44-3.16,2.19a158.31,158.31,0,0,0-14.92,12Q233.13,338.2,230.4,341Z"
             />
           </g>
-          <g class="part group" @click="">
+          <g class="part group hover:scale-125" @click="info = delight"> 
             <path
               class="cls-3"
               d="M316.56,264.88q-3.68,6.78-6.72,13.95c-1,2.38-2,4.8-2.86,7.24s-1.73,4.92-2.5,7.42c-.06.17-.1.34-.16.51a165.73,165.73,0,0,1,76.23-.41l0-.1c-.77-2.5-1.61-5-2.5-7.42s-1.85-4.86-2.86-7.24q-3-7.17-6.72-13.95a159.16,159.16,0,0,0-14.78-22.46,157.21,157.21,0,0,0-11.16-12.74,157.21,157.21,0,0,0-11.16,12.74A159.16,159.16,0,0,0,316.56,264.88Z"
             />
           </g>
-          <g class="part group" @click="">
+          <g class="part group hover:scale-125" @click="info = confort">
             <path
               class="cls-4"
               d="M342.9,392.15a164.18,164.18,0,0,1-38.67-4.58,159.47,159.47,0,0,0,38.27,64.65,159.34,159.34,0,0,0,38.21-64.44A164.45,164.45,0,0,1,342.9,392.15Z"
             />
           </g>
-          <g class="part group" @click="">
+          <g class="part group" @click="info = passion">
             <path
               class="cls-5"
               d="M227,337.51h0a164.31,164.31,0,0,1,71.84-42.09,163.88,163.88,0,0,1,40.21-69.12q-1.82-1.77-3.69-3.48a158.31,158.31,0,0,0-14.92-12c-1-.75-2.09-1.48-3.16-2.19q-3.18-2.16-6.47-4.15a159.15,159.15,0,0,0-20.64-10.57c-2.38-1-4.8-2-7.24-2.86a159.07,159.07,0,0,0-18.84-5.59q-3.86-.9-7.79-1.6a161.5,161.5,0,0,0-56.5,0q-3.93.71-7.79,1.6c-1.11.25-2.2.52-3.3.8-.14.54-.3,1.08-.44,1.62-.32,1.28-.64,2.56-.93,3.85q-.9,3.85-1.6,7.79a159.93,159.93,0,0,0,41.25,138Z"
@@ -62,7 +62,7 @@
               Passion
             </text>
           </g>
-          <g class="part group" @click="">
+          <g class="part group" @click="info = mission">
             <path
               class="cls-12"
               d="M500,199.5q-.7-3.93-1.6-7.79c-.29-1.29-.61-2.57-.93-3.85-.13-.47-.26-.93-.38-1.4-1.38-.36-2.77-.7-4.16-1q-3.85-.9-7.79-1.6a161.5,161.5,0,0,0-56.5,0q-3.93.71-7.79,1.6A159.07,159.07,0,0,0,402,191c-2.44.9-4.86,1.85-7.24,2.86a159.15,159.15,0,0,0-20.64,10.57q-3.28,2-6.47,4.15c-1.07.71-2.12,1.44-3.16,2.19a158.31,158.31,0,0,0-14.92,12q-1.87,1.71-3.69,3.48A163.65,163.65,0,0,1,386,295a163.75,163.75,0,0,1,73.17,42.15A159.92,159.92,0,0,0,500,199.5Z"
@@ -71,7 +71,7 @@
               Mission
             </text>
           </g>
-          <g class="part group" @click="">
+          <g class="part group" @click="info = vocation">
             <path
               class="cls-16"
               d="M459.15,344a163.85,163.85,0,0,1-73,42.4,162.06,162.06,0,0,1-6.55,18.54,163.8,163.8,0,0,1-33.68,50.67,159.83,159.83,0,0,0,151.51,39.75,160.86,160.86,0,0,0,3-69.86q-.71-3.93-1.6-7.79c-.29-1.29-.61-2.57-.93-3.85q-1-3.83-2.16-7.57c-.77-2.5-1.61-5-2.5-7.42s-1.85-4.86-2.86-7.24q-3-7.17-6.72-13.95a159.16,159.16,0,0,0-14.78-22.46q-4.59-5.85-9.7-11.23Z"
@@ -80,7 +80,7 @@
               Vocation
             </text>
           </g>
-          <g class="part group" @click="">
+          <g class="part group" @click="info = profession">
             <path
               class="cls-19"
               d="M189.31,495.79A159.76,159.76,0,0,0,339.1,455.61a163.82,163.82,0,0,1-40.3-69.44,164,164,0,0,1-71.74-41.77c-3.26,3.46-6.38,7.07-9.32,10.82A159.16,159.16,0,0,0,203,377.68q-3.68,6.78-6.72,13.95c-1,2.38-2,4.8-2.86,7.24s-1.73,4.92-2.5,7.42-1.5,5-2.16,7.57c-.32,1.28-.64,2.56-.93,3.85q-.9,3.85-1.6,7.79a160.79,160.79,0,0,0,3.12,70.29Z"
@@ -89,7 +89,7 @@
               Profession
             </text>
           </g>
-          <g class="part group" @click="">
+          <g class="part group" @click="info = paid">
             <path
               class="cls-22"
               d="M392.91,492.43A163.73,163.73,0,0,1,342.5,459a164.66,164.66,0,0,1-151.65,42.11,159.65,159.65,0,0,0,305-.41,165.21,165.21,0,0,1-103-8.27Z"
@@ -102,7 +102,7 @@
               <tspan x="11.21" y="20.16">can be</tspan>
             </text>
           </g>
-          <g class="part group" @click="">
+          <g class="part group" @click="info = good">
             <path
               class="cls-29"
               d="M191.82,389.76A163.79,163.79,0,0,1,223.7,341,164.71,164.71,0,0,1,183.41,187.7q-5.16,1.5-10.19,3.33c-2.44.9-4.86,1.85-7.24,2.86a159.15,159.15,0,0,0-20.64,10.57q-3.28,2-6.47,4.15c-1.07.71-2.12,1.44-3.16,2.19a158.31,158.31,0,0,0-14.92,12,160.44,160.44,0,0,0-33,42.07q-3.67,6.78-6.72,13.95c-1,2.38-2,4.8-2.86,7.24s-1.73,4.92-2.5,7.42-1.5,5-2.16,7.57c-.32,1.28-.64,2.56-.93,3.85q-.9,3.85-1.6,7.79A159.84,159.84,0,0,0,184,494.36a165.26,165.26,0,0,1,7.87-104.6Z"
@@ -115,7 +115,7 @@
               Good At
             </text>
           </g>
-          <g class="part group" @click="">
+          <g class="part group" @click="info = love">
             <path
               class="cls-30"
               d="M228.1,176.55A163.79,163.79,0,0,1,342.5,222.9a164.62,164.62,0,0,1,153.07-41.77c-.08-.28-.16-.56-.25-.84-.77-2.5-1.61-5-2.5-7.42S491,168,490,165.63q-3-7.17-6.72-13.95A160.27,160.27,0,0,0,435.29,97.6c-1-.75-2.09-1.48-3.16-2.19q-3.18-2.16-6.47-4.15A159.15,159.15,0,0,0,405,80.69c-2.38-1-4.8-2-7.24-2.86a159.07,159.07,0,0,0-18.84-5.59q-3.85-.9-7.79-1.6a161.5,161.5,0,0,0-56.5,0q-3.93.7-7.79,1.6A159.07,159.07,0,0,0,288,77.83c-2.44.9-4.86,1.85-7.24,2.86a159.15,159.15,0,0,0-20.64,10.57q-3.28,2-6.47,4.15c-1.07.71-2.12,1.44-3.16,2.19a158.31,158.31,0,0,0-14.92,12,160.44,160.44,0,0,0-33,42.07q-3.67,6.78-6.72,13.95c-1,2.38-2,4.8-2.86,7.24s-1.73,4.92-2.5,7.42c-.07.21-.13.42-.19.63A164.45,164.45,0,0,1,228.1,176.55Z"
@@ -124,10 +124,10 @@
               What you
             </text>
             <text class="main group-hover:text-gray-800" transform="translate(320.37 160.33)">
-              Love<
+              Love
             </text>
           </g>
-          <g class="part group" @click="">
+          <g class="part group" @click="info = needs">
             <path
               class="cls-32"
               d="M614,312.7q-.71-3.93-1.6-7.79c-.29-1.29-.61-2.57-.93-3.85q-1-3.82-2.16-7.57c-.77-2.5-1.61-5-2.5-7.42s-1.85-4.86-2.86-7.24q-3-7.17-6.72-13.95a160.27,160.27,0,0,0-48-54.08c-1-.75-2.09-1.48-3.16-2.19q-3.18-2.16-6.47-4.15A159.15,159.15,0,0,0,519,193.89c-2.38-1-4.8-2-7.24-2.86q-4.61-1.68-9.33-3.07A164.17,164.17,0,0,1,462.5,340.54a164.73,164.73,0,0,1,40.28,153.31A159.85,159.85,0,0,0,614,312.7Z"
@@ -140,7 +140,7 @@
               Needs
             </text>
           </g>
-          <g class="part hover:scale-125 group" @click="">
+          <g class="part hover:scale-125 group" @click="info = ikigai">
             <path
               class="cls-35"
               d="M382.24,382.46a160.91,160.91,0,0,0,3-69.76q-.7-3.93-1.6-7.79c-.29-1.29-.61-2.57-.93-3.85-.19-.72-.39-1.43-.59-2.15-.91-.23-1.83-.46-2.75-.67q-3.85-.9-7.79-1.6a161.5,161.5,0,0,0-56.5,0q-3.93.71-7.79,1.6c-1.5.34-3,.72-4.47,1.1-.15.58-.32,1.15-.47,1.72-.32,1.28-.64,2.56-.93,3.85q-.9,3.85-1.6,7.79a160.94,160.94,0,0,0,2.91,69.54,160.69,160.69,0,0,0,79.54.22Z"
@@ -151,17 +151,40 @@
           </g>
         </svg>
       </section>
+      <section
+        x-show.transition="info"
+        class="absolute inset-0 flex justify-center items-center"
+      >
+        <aside class="relative w-full md:w-8/12 rounded shadow-2xl bg-gray-100 px-12 py-6 grid grid-cols-10">
+          <button class="absolute top-0 right-0 mt-2 mr-2 p-1 hover:text-red-600 hover:bg-red-200 rounded-md" @click="info = false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="9" y1="9" x2="15" y2="15"/>
+              <line x1="15" y1="9" x2="9" y2="15"/>
+            </svg>
+          </button>
+          <svg class="col-span-2 text-indigo-600 justify-self-center mt-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+          <div class="col-span-8">
+            <h4 class="font-main text-green-500 text-2xl leading-none mb-4" x-text="info.title"></h4>
+            <p class="leading-snug" x-html="info.text"></p>
+          </div>
+        </aside>
+      </section>
     </main>
-    <footer class="flex justify-center items-center space-x-1">
+    <footer class="flex flex-row  justify-center items-center space-x-1">
       <picture>
         <img src="./assets/icons/coffee.svg" alt="" />
       </picture>
-      <span> si te gusta lo que hago, podes donar a la causa </span>
+      <span class="hidden md:inline-block"> si te gusta lo que hago, podes donar a la causa </span>
       <form
         action="https://www.paypal.com/cgi-bin/webscr"
         method="post"
         target="_top"
-        class="h-6"
+        class="h-6 flex items-center"
       >
         <input type="hidden" name="cmd" value="_s-xclick" />
         <input type="hidden" name="hosted_button_id" value="CNKTDFG75UFXG" />
@@ -184,7 +207,24 @@
       </form>
     </footer>
     <div class="h-1 bg-gradient-to-r to-yellow-400 from-green-500 w-full"></div>
-
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+    <script>
+      const ikigai = { title: 'Ikigai', text: '<strong>Una razon de ser</strong>, la con una sana conbinacion de lo que uno ama, en lo que uno es bueno, lo que el mundo necesita y por lo que nos pueden pagar. <br/> <strong>Cual es tu IKIGAI?</strong>' };
+      // ----
+      const needs = { title: 'Lo que el mundo necesita', text: 'Algo que nosotros podemos ofrecer y que el mundo necesita' }
+      const love = { title: 'Lo que amamos hacer', text: 'Algo que nos trae satisfacion absoluta al hacerlo' }
+      const good = { title: 'En lo que somos buenos', text: 'Con trabajo o talento somos la persona idonea para la tarea' }
+      const paid = { title: 'Por lo que nos pagan', text: 'Desempeñando la tarea logramos generarle valor a alguien o algo' }
+      // ----
+      const passion = { title: 'Amor + Bueno = Passion', text: 'No solo amamos hacerlo sino que tambien somos buenos. Aun asi no nos genera ingresos y no es lo que el mundo necesita' }
+      const mission = { title: 'Amor + Necesidad = Mision', text: 'El mundo lo necesita y lo amamos hacer, pero no nos genera dinero y no somos la persona idonea para el trabajo' }
+      const vocation = { title: 'Necesidad + Pago = Vocación', text: 'Hacemos algo que el mundo necesita y nos pagan por ello. Quizas no somos del todo bueno y si bien el hacerlo nos da satisfacion no es algo qu eamamos hacer' }
+      const profession = { title: 'Bueno + Pago = Profesión', text: 'Somos buenos en algo y por eso nos pagan. No es algo que amemos hacer y tampoco genera un impacto en el mundo' }
+      // ---
+      const satisfacion = { title: 'Passion + Profesión', text: '<strong>Satisfacción, pero sensación de inutilidad</strong>' }
+      const delight = { title: 'Passion + Mission', text: '<strong>Deleite y plenitud, pero no riqueza</strong>' }
+      const exictement = { title: 'Mission + Vocación', text: '<strong>Emoción y complacencia, pero una sensación de incertidumbre</strong>' }
+      const confort = { title: 'Profesión + Vocación', text: '<strong>Cómodo, pero la sensación de vacío.</strong>' }
     </script>
   </body>
 </html>
