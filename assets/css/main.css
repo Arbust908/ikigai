@@ -623,6 +623,46 @@ video {
   row-gap: 0.5rem;
 }
 
+.part {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.part:hover {
+  --transform-scale-x: 1.05;
+  --transform-scale-y: 1.05;
+}
+
+.part > .main {
+  font-size: 1.25rem;
+  font-family: Millik;
+  fill: currentColor;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  color: transparent;
+}
+
+.part > .second {
+  font-family: Circular;
+  fill: currentColor;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  color: transparent
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -21602,12 +21642,157 @@ video {
           animation: bounce 1s infinite;
 }
 
+.cls-1 {
+  fill: #cdae7f;
+}
+
+.cls-2 {
+  fill: #a8d17a;
+}
+
+.cls-3 {
+  fill: #c8bf81;
+}
+
+.cls-4 {
+  fill: #a7c588;
+}
+
+.cls-5 {
+  fill: #dcf466;
+}
+
+.cls-34,
+  .cls-36,
+  .cls-6 {
+  font-size: 19.2px;
+  font-family: MillikRegular, Millik;
+}
+
+.cls-7 {
+  letter-spacing: -0.04em;
+}
+
+.cls-8 {
+  letter-spacing: -0.04em;
+}
+
+.cls-34,
+  .cls-9 {
+  letter-spacing: -0.03em;
+}
+
+.cls-10 {
+  letter-spacing: 0em;
+}
+
+.cls-11 {
+  letter-spacing: -0.03em;
+}
+
+.cls-12 {
+  fill: #f8cd79;
+}
+
+.cls-13 {
+  letter-spacing: -0.02em;
+}
+
+.cls-14 {
+  letter-spacing: -0.04em;
+}
+
+.cls-15 {
+  letter-spacing: -0.03em;
+}
+
+.cls-16 {
+  fill: #d2cbb3;
+}
+
+.cls-17 {
+  letter-spacing: -0.11em;
+}
+
+.cls-18 {
+  letter-spacing: -0.01em;
+}
+
+.cls-19 {
+  fill: #b6ffa9;
+}
+
+.cls-20 {
+  letter-spacing: -0.01em;
+}
+
+.cls-21 {
+  letter-spacing: -0.05em;
+}
+
+.cls-22 {
+  fill: #b3ffe5;
+}
+
+.cls-23 {
+  letter-spacing: -0.01em;
+}
+
+.cls-24 {
+  letter-spacing: -0.05em;
+}
+
+.cls-25 {
+  font-size: 16.8px;
+  font-family: CircularStd-Book, Circular Std;
+}
+
+.cls-26 {
+  letter-spacing: -0.02em;
+}
+
+.cls-27 {
+  letter-spacing: 0em;
+}
+
+.cls-28 {
+  letter-spacing: 0em;
+}
+
+.cls-29 {
+  fill: #ddff8b;
+}
+
+.cls-30 {
+  fill: #fcf273;
+}
+
+.cls-31 {
+  letter-spacing: -0.05em;
+}
+
+.cls-32 {
+  fill: #f6b4a9;
+}
+
+.cls-33 {
+  letter-spacing: -0.01em;
+}
+
+.cls-35 {
+  fill: #6f875c;
+}
+
+.cls-36 {
+  fill: #fff;
+}
+
 @font-face {
-  font-family: 'Circular';
+  font-family: "Circular";
 
-  src: url('/assets/fonts/CircularStd-Book.otf');
+  src: url("/assets/fonts/CircularStd-Book.otf");
 
-  src: url('/assets/fonts/CircularStd-Book.otf') format('opentype');
+  src: url("/assets/fonts/CircularStd-Book.otf") format("opentype");
 
   font-style: normal;
 
@@ -21617,11 +21802,11 @@ video {
 }
 
 @font-face {
-  font-family: 'Millik';
+  font-family: "Millik";
 
-  src: url('/assets/fonts/Millik.ttf');
+  src: url("/assets/fonts/Millik.ttf");
 
-  src: url('/assets/fonts/Millik.ttf') format('truetype');
+  src: url("/assets/fonts/Millik.ttf") format("truetype");
 
   font-style: normal;
 

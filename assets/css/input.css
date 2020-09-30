@@ -5,25 +5,152 @@
 @tailwind utilities;
 
 @layer components {
-    .body-grid {
-        grid-template-rows: 1fr 36px;
-        @apply grid min-h-screen w-full gap-y-2;
-    }
+  .body-grid {
+    grid-template-rows: 1fr 36px;
+    @apply grid min-h-screen w-full gap-y-2;
+  }
+  .part {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    @apply transition transform duration-150 ease-in-out;
+  }
+  .part:hover {
+    @apply scale-105;
+  }
+  .part > .main {
+      @apply text-xl font-main fill-current transition duration-150 ease-out text-transparent ;
+  }
+  .part > .second {
+      @apply font-body fill-current transition duration-150 ease-out text-transparent 
+  }
+}
+
+@layer utilities {
+  .cls-1 {
+    fill: #cdae7f;
+  }
+  .cls-2 {
+    fill: #a8d17a;
+  }
+  .cls-3 {
+    fill: #c8bf81;
+  }
+  .cls-4 {
+    fill: #a7c588;
+  }
+  .cls-5 {
+    fill: #dcf466;
+  }
+  .cls-34,
+  .cls-36,
+  .cls-6 {
+    font-size: 19.2px;
+    font-family: MillikRegular, Millik;
+  }
+  .cls-7 {
+    letter-spacing: -0.04em;
+  }
+  .cls-8 {
+    letter-spacing: -0.04em;
+  }
+  .cls-34,
+  .cls-9 {
+    letter-spacing: -0.03em;
+  }
+  .cls-10 {
+    letter-spacing: 0em;
+  }
+  .cls-11 {
+    letter-spacing: -0.03em;
+  }
+  .cls-12 {
+    fill: #f8cd79;
+  }
+  .cls-13 {
+    letter-spacing: -0.02em;
+  }
+  .cls-14 {
+    letter-spacing: -0.04em;
+  }
+  .cls-15 {
+    letter-spacing: -0.03em;
+  }
+  .cls-16 {
+    fill: #d2cbb3;
+  }
+  .cls-17 {
+    letter-spacing: -0.11em;
+  }
+  .cls-18 {
+    letter-spacing: -0.01em;
+  }
+  .cls-19 {
+    fill: #b6ffa9;
+  }
+  .cls-20 {
+    letter-spacing: -0.01em;
+  }
+  .cls-21 {
+    letter-spacing: -0.05em;
+  }
+  .cls-22 {
+    fill: #b3ffe5;
+  }
+  .cls-23 {
+    letter-spacing: -0.01em;
+  }
+  .cls-24 {
+    letter-spacing: -0.05em;
+  }
+  .cls-25 {
+    font-size: 16.8px;
+    font-family: CircularStd-Book, Circular Std;
+  }
+  .cls-26 {
+    letter-spacing: -0.02em;
+  }
+  .cls-27 {
+    letter-spacing: 0em;
+  }
+  .cls-28 {
+    letter-spacing: 0em;
+  }
+  .cls-29 {
+    fill: #ddff8b;
+  }
+  .cls-30 {
+    fill: #fcf273;
+  }
+  .cls-31 {
+    letter-spacing: -0.05em;
+  }
+  .cls-32 {
+    fill: #f6b4a9;
+  }
+  .cls-33 {
+    letter-spacing: -0.01em;
+  }
+  .cls-35 {
+    fill: #6f875c;
+  }
+  .cls-36 {
+    fill: #fff;
+  }
 }
 
 @font-face {
-    font-family: 'Circular';
-    src: url('/assets/fonts/CircularStd-Book.otf');
-    src: url('/assets/fonts/CircularStd-Book.otf') format('opentype');
-    font-style: normal;
-    font-weight: normal;
-    display: swap;
+  font-family: "Circular";
+  src: url("/assets/fonts/CircularStd-Book.otf");
+  src: url("/assets/fonts/CircularStd-Book.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+  display: swap;
 }
 @font-face {
-    font-family: 'Millik';
-    src: url('/assets/fonts/Millik.ttf');
-    src: url('/assets/fonts/Millik.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-    display: swap;
+  font-family: "Millik";
+  src: url("/assets/fonts/Millik.ttf");
+  src: url("/assets/fonts/Millik.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  display: swap;
 }
