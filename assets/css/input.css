@@ -17,11 +17,21 @@
   .part:hover {
     @apply scale-105;
   }
+  .part > .main,
+  .part > .second {
+    @apply fill-current transition duration-150 ease-out;
+  }
   .part > .main {
-      @apply text-xl font-main fill-current transition duration-150 ease-out text-transparent ;
+    @apply text-xl font-main;
   }
   .part > .second {
-      @apply font-body fill-current transition duration-150 ease-out text-transparent 
+    @apply font-body;
+  }
+  @media screen and (min-width: 768px) {
+    .part > .main,
+    .part > .second {
+      @apply text-transparent;
+    }
   }
 }
 

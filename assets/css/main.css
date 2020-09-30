@@ -644,23 +644,28 @@ video {
   --transform-scale-y: 1.05;
 }
 
-.part > .main {
-  font-size: 1.25rem;
-  font-family: Millik;
+.part > .main,
+  .part > .second {
   fill: currentColor;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 150ms;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  color: transparent;
+}
+
+.part > .main {
+  font-size: 1.25rem;
+  font-family: Millik;
 }
 
 .part > .second {
   font-family: Circular;
-  fill: currentColor;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  color: transparent
+}
+
+@media screen and (min-width: 768px) {
+  .part > .main,
+    .part > .second {
+    color: transparent;
+  }
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
